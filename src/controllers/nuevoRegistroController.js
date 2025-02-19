@@ -1,7 +1,12 @@
+const validarFormularioRegistro = require("../utils/validations/validarFormularioRegistro");
 
 function nuevoRegistroController(req, res) {
     // Verificar por body _csrf o heder X-CSRF-Token con middleware csrfProtection. (validacion de formulario)
-    res.send("Ha logrado pasar el CSRF.");
+    //res.send("Ha logrado pasar el CSRF.");
+
+    validarFormularioRegistro(req.body)
+    res.json(req.body);
+
 
     // Model (await)
     // view

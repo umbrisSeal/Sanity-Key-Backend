@@ -16,7 +16,7 @@ mainRouter.get('/', (req, res) => {
     res.send("Hola mundo, estas en inicio.");
 })
 
-app.all("*", (req, res) => {
+mainRouter.all("*", (req, res) => {
     res.send("Error, ruta no encontrada.");
 })
 

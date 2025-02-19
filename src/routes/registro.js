@@ -16,7 +16,7 @@ registro.use( (err, req, res, next) => {
     if(err.code === 'EBADCSRFTOKEN') {
         // Se requiere una respuesta menos generica.
         res.send("Tu token CSRF es incorrecto.");
-        next();
+        return;
     }
     res.send("Algo esta mal, pero no es el error CSRF.");
 });

@@ -1,6 +1,11 @@
 const express = require('express');
 const mainRouter = express.Router();
 
+const registro = require('./registro');
+
+
+mainRouter.use("/registro", registro);
+
 // define endpoint files
 
 // mainRouter.use("endpoint", endpoint file)
@@ -8,7 +13,7 @@ const mainRouter = express.Router();
 
 
 mainRouter.get('/', (req, res) => {
-    res.send("Hola mundo");
+    res.send("Hola mundo, estas en inicio.");
 })
 
 

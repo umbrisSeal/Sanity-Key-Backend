@@ -11,6 +11,8 @@
     "nodemon": "npx nodemon server.js"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "csurf": "^1.10.0",
     "express": "^4.21.2"
   },
   "devDependencies": {

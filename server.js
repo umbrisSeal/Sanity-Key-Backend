@@ -1,11 +1,15 @@
 const express = require('express');
 const app = express();
 
+const mainRouter = require('./routes/mainRouter');
+
 const port = 8000
 
 
-app.get('/', (req, res) => {
-    res.send("Hola mundo.");
+app.use('/', mainRouter);
+
+app.all("*", (req, res) => {
+    res.send("Error, ruta no encontrada.");
 })
 
 

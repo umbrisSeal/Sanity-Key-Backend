@@ -1,15 +1,24 @@
 
 const ERROR = require('../errors/error');
 const validarEmail = require('./validarEmail');
+const validarPassword = require('./validarPassword');
 
-function validarFormularioRegistro(formularioBodyJSON) {
-    const {email, password, passwordRepetido} = formularioBodyJSON;
+function validarFormularioRegistro(req) {
+    const {email, password, passwordRepetido} = req.body;
     const errores = {};
 
     if(!validarEmail(email)) errores.email = ERROR.es.EMAIL_INCORRECTO;
+    if(!validarPassword(password)) errores.password = ERROR.es.PASSWORD_FORMATO_INCORRECTO;
+    if(password !== passwordRepetido) errores.passwordRepetido = ERROR.es.PASSWORDS_NO_COINCIDEN;
 
-    console.log(email, password, passwordRepetido);
-    console.log(errores);
+    if(Object.keys(errores).length > 0) {
+        req.errores = {
+            error: ERROR.es.FORMULARIO_INCORRECTO,
+            detalles: errores
+        }
+        return false;
+    }
+
     return true;
 }
 

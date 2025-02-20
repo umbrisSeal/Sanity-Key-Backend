@@ -1,5 +1,5 @@
 
-const ERROR = require('../errors/error');
+const ERROR = require('../messages/errors/error');
 const validarEmail = require('./validarEmail');
 const validarPassword = require('./validarPassword');
 

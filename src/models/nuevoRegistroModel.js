@@ -40,8 +40,7 @@ async function nuevoRegistroModel(req) {
         return;
     }
 
-    // Redirigir a la url para registrar su codigo secreto.
-
+    req.nuevoId = usuario_id;
 }
 
 module.exports = nuevoRegistroModel;

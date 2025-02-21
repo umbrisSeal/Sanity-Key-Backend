@@ -6,7 +6,8 @@ const ERROR = {
         PASSWORDS_NO_COINCIDEN: "Las contraseñas no coinciden.",
         FORMULARIO_INCORRECTO: "El formulario tiene campos incorrectos.",
         USUARIO_REPETIDO: "Este usuario ya existe.",
-        EMAIL_REPETIDO: "El email que intenta registrar ya esta en uso por alguien mas. Por favor, use otro correo electronico."
+        EMAIL_REPETIDO: "El email que intenta registrar ya esta en uso por alguien mas. Por favor, use otro correo electronico.",
+        USUARIO_NO_CREADO: "El usuario no pudo ser registrado. Intentelo mas tarde."
     },
     en: {
         //

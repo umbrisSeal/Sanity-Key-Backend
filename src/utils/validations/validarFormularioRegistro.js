@@ -15,7 +15,8 @@ function validarFormularioRegistro(req) {
         req.errores = {
             error: ERROR.es.FORMULARIO_INCORRECTO,
             detalles: errores
-        }
+        };
+        req.customStatus = 400;
         return false;
     }
 

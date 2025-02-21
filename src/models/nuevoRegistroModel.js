@@ -25,6 +25,7 @@ async function nuevoRegistroModel(req) {
                 usuarioRepetido: ERROR.es.EMAIL_REPETIDO
             }
         };
+        req.customStatus = 409;
         return;
     }
 
@@ -35,6 +36,7 @@ async function nuevoRegistroModel(req) {
                 errorInterno: ERROR.es.USUARIO_NO_CREADO
             }
         };
+        req.customStatus = 500;
         return;
     }
 

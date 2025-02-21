@@ -3,7 +3,7 @@ function nuevoRegistroView(req, res) {
 
     if(req.hasOwnProperty("errores")) {
         // Enviar una respuesta.
-        res.status(400).json(req.errores);
+        res.status(req.customStatus).json(req.errores);
         return;
     }
 

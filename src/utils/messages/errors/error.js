@@ -7,7 +7,8 @@ const ERROR = {
         FORMULARIO_INCORRECTO: "El formulario tiene campos incorrectos.",
         USUARIO_REPETIDO: "Este usuario ya existe.",
         EMAIL_REPETIDO: "El email que intenta registrar ya esta en uso por alguien mas. Por favor, use otro correo electronico.",
-        USUARIO_NO_CREADO: "El usuario no pudo ser registrado. Intentelo mas tarde."
+        USUARIO_NO_CREADO: "El usuario no pudo ser registrado. Intentelo mas tarde.",
+        CSRF_INVALIDO: "El token CSRF esta ausente o es incorrecto."
     },
     en: {
         //

@@ -11,6 +11,7 @@
     "nodemon": "npx nodemon server.js"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.7",
     "csurf": "^1.10.0",
     "dotenv": "^16.4.7",

@@ -1,12 +1,14 @@
+const nuevoRegistroModel = require("../models/nuevoRegistroModel");
 const validarFormularioRegistro = require("../utils/validations/validarFormularioRegistro");
 const nuevoRegistroView = require("../views/nuevoRegistroView");
 
-function nuevoRegistroController(req, res) {
+async function nuevoRegistroController(req, res) {
     // Verificar por body _csrf o heder X-CSRF-Token con middleware csrfProtection. (validacion de formulario)
     //res.send("Ha logrado pasar el CSRF.");
 
-    if(validarFormularioRegistro(req)); // Mandar a llamar el modelo para registrar al usuario.
+    if(validarFormularioRegistro(req)) await nuevoRegistroModel(req, res);
     
+    console.log("Este debe de ser el ultimo mensaje.");
     nuevoRegistroView(req, res);
 }
 

@@ -1,12 +1,8 @@
 
 function verificarCuentaView(req, res) {
+    if(req.errores) return res.status(req.customStatus).json(req.errores);
 
-    // Esta vista siempre manejara errores.
-
-    if(req.errores) return res.status(400).json(req.errores);
-
-    //res.send("Todo tranquilo");
-    res.json(req.prueba);
+    res.send("Todo bien.");
 }
 
 module.exports = verificarCuentaView;

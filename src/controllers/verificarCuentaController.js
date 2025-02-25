@@ -9,6 +9,7 @@ async function verificarCuentaController(req, res, next) {
     if(validarUsuarioId(id)) {
         req.usuario_id = id;
     } else {
+        req.customStatus = 400;
         req.errores = {
             error: 'Usuario ID incorrecto.',
             detalles: {

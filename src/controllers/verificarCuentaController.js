@@ -18,7 +18,8 @@ async function verificarCuentaController(req, res, next) {
         }
     };
 
-    if(!req.errores) await verificarCuentaModel(req, next);
+    if(!req.errores) await verificarCuentaModel(req);
+    if(req.paseDirectoLogin) return next();
 
     verificarCuentaView(req, res);
 }

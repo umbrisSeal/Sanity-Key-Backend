@@ -3,7 +3,7 @@ const buscarUsuario = require("../services/database/buscarUsuario");
 const verificarUsuario = require("../services/database/verificarUsuario");
 const ERROR = require("../utils/messages/errors/error");
 
-async function verificarCuentaModel(req, next) {
+async function verificarCuentaModel(req) {
     const { usuario_id } = req;
     const { codigoVerificacion } = req.body;
 
@@ -26,7 +26,7 @@ async function verificarCuentaModel(req, next) {
     if(!await verificarUsuario(usuario_id)) { req.customStatus = 500; return req.errores = { error: 'Verificacion Fallida.', detalles: { verificacionFallida: ERROR.es.VERIFICACION_FALLIDA }}};
 
     req.paseDirectoLogin = true;
-    next();
+    req.datosUsuario = datosUsuario;
 }
 
 module.exports = verificarCuentaModel;

@@ -4,11 +4,13 @@ const mainRouter = express.Router();
 const registro = require('./registro');
 const avatar = require('./avatar');
 const verificar = require('./verificar');
+const sesion = require('./sesion');
 
 
 mainRouter.use("/avatar", avatar);
 mainRouter.use("/registro", registro);
 mainRouter.use("/verificar", verificar);
+mainRouter.use("/sesion", sesion);
 
 // define endpoint files
 

@@ -2,9 +2,9 @@ const express = require('express');
 const sesion = express.Router();
 const csurf = require('csurf');
 const csrfProtection = csurf({cookie: true});
-
-
 const ERROR = require('../utils/messages/errors/error');
+
+
 const cerrarSesionController = require('../controllers/cerrarSesionController');
 const iniciarSesionController = require('../controllers/iniciarSesionController');
 

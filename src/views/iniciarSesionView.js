@@ -3,7 +3,7 @@ const opcionesCookie = require("../utils/helpers/opcionesCookie");
 
 function iniciarSesionView(req, res) {
 
-    if(req.errores) return res.status(req.customStatus.json(req.errores));
+    if(req.errores) return res.status(req.customStatus).json(req.errores);
 
     const sessionToken = crearSessionToken(req.datosUsuario);
     res.cookie("sessionToken", sessionToken, opcionesCookie);

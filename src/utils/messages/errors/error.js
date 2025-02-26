@@ -14,7 +14,9 @@ const ERROR = {
         USUARIO_YA_VERIFICADO: "El usuario con el ID especificado ya esta verificado.",
         CODIGO_CADUCADO: "El codigo de verificacion proporcionado ha expirado y la cuenta asociada ya fue borrada. Por favor, cree una nueva cuenta.",
         CODIGO_INCORRECTO: "El codigo de verificacion proporcionado no es correcto. Por favor, verifiquelo.",
-        VERIFICACION_FALLIDA: "No se pudo verificar al usuario. Por favor, intentelo mas tarde."
+        VERIFICACION_FALLIDA: "No se pudo verificar al usuario. Por favor, intentelo mas tarde.",
+        LOGIN_ERROR: "El correo electronico o password es incorrecto.",
+        CUENTA_NO_VERIFICADA: "Esta cuenta aun no ha sido verificada.",
     },
     en: {
         //

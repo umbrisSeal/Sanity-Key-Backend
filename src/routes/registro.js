@@ -10,7 +10,7 @@ const solicitarCSRFController = require('../controllers/solicitarCSRFController'
 const nuevoRegistroController = require('../controllers/nuevoRegistroController');
 
 
-registro.get("/", csrfProtection, solicitarCSRFController);
+registro.get("/", csrfProtection, solicitarCSRFController); // Quitar csrfProtection de aqui.
 registro.post("/", csrfProtection, nuevoRegistroController);
 
 

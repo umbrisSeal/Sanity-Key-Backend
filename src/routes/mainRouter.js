@@ -5,12 +5,14 @@ const registro = require('./registro');
 const avatar = require('./avatar');
 const verificar = require('./verificar');
 const sesion = require('./sesion');
+const perfil = require('./perfil');
 
 
 mainRouter.use("/avatar", avatar);
 mainRouter.use("/registro", registro);
 mainRouter.use("/verificar", verificar);
 mainRouter.use("/sesion", sesion);
+mainRouter.use("/perfil", perfil);
 
 // define endpoint files
 

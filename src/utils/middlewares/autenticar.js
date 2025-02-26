@@ -12,9 +12,3 @@ function autenticar(req, res, next) {
 }
 
 module.exports = autenticar;
-
-/*
-	auth: Verifica el JWT. En caso de no ser valido, borra la cookie de sessionToken y redirige a la pagina para logearse.
-		-> Si el tiempo de vida es poco, refresh?
-
-*/

@@ -17,6 +17,7 @@ const ERROR = {
         VERIFICACION_FALLIDA: "No se pudo verificar al usuario. Por favor, intentelo mas tarde.",
         LOGIN_ERROR: "El correo electronico o password es incorrecto.",
         CUENTA_NO_VERIFICADA: "Esta cuenta aun no ha sido verificada.",
+        SOLICITUD_INCORRECTA: "La solicitud no tiene la forma esperada."
     },
     en: {
         //
